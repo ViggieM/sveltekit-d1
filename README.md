@@ -54,7 +54,7 @@ pnpm drizzle-kit generate
 pnpm drizzle-kit migrate
 
 # apply migrations locally
-pnpm wrangler d1 migrations apply sveltekit-template --local
+pnpm wrangler d1 migrations apply [DATABASE_NAME] --local
 ```
 
 6. Deploy your worker

@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "sveltekit-template",
+	"name": "<TBD>",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2025-10-01",
 	"compatibility_flags": ["nodejs_als", "nodejs_compat"],
