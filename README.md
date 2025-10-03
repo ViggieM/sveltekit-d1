@@ -37,9 +37,10 @@ pnpm wrangler types ./src/worker-configuration.d.ts
 
 <details>
 <summary>
-  The CLOUDFLARE_D1_TOKEN can be created in the <a href="https://dash.cloudflare.com/?to=/:account/api-tokens">Account API tokens</a>
+  CLOUDFLARE_D1_TOKEN
 </summary>
 <ul>
+    <li><a href="https://dash.cloudflare.com/?to=/:account/api-tokens">Go to Account API tokens</a> (or <a href="https://dash.cloudflare.com/profile/api-tokens">User API Tokens</a>)</li>
   <li>Under <strong>API Tokens</strong>, select <strong>Create Token</strong>.</li>
   <li>Scroll to <strong>Custom token</strong> > <strong>Create custom token</strong>, then select <strong>Get started</strong>.</li>
   <li>Under <strong>Token name</strong>, enter a descriptive token name. For example, <code>Name-D1-Import-API-Token</code>.</li>
