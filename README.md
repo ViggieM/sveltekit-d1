@@ -1,8 +1,14 @@
 # SvelteKit running on Cloudflare Pages with D1 Database
 
 This is a template for the [Cloudflare C3 CLI](https://developers.cloudflare.com/pages/get-started/c3/) that initializes a new SvelteKit project with a D1 database.
-It includes database management with drizzle and authentication with lucia.
-It also makes use of the latest feature of SvelteKit, [Remote functions • Docs • Svelte](https://svelte.dev/docs/kit/remote-functions).
+
+**Key Features:**
+
+- connects to D1 database with [Drizzle](https://orm.drizzle.team/docs/connect-cloudflare-d1)
+- authentication with [Lucia](https://lucia-auth.com/)
+- makes use of [Remote functions](https://svelte.dev/docs/kit/remote-functions) in SvelteKit
+- DaisyUI for styling
+- [valibot](https://valibot.dev/) for form validation
 
 ## Setup Instructions
 
