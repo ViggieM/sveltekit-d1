@@ -1,4 +1,4 @@
-# SvelteKit running on Cloudflare Pages with D1 Database
+# SvelteKit on Cloudflare Worker with D1 Database (SQLite)
 
 This is a template for the [Cloudflare C3 CLI](https://developers.cloudflare.com/pages/get-started/c3/) that initializes a new SvelteKit project with a D1 database.
 
@@ -17,7 +17,6 @@ This is a template for the [Cloudflare C3 CLI](https://developers.cloudflare.com
 ```bash
 pnpm create cloudflare@latest --template git@github.com:ViggieM/sveltekit-d1.git [DIRECTORY] --git
 cd [DIRECTORY]
-pnpm install
 pre-commit install
 ```
 
@@ -101,6 +100,21 @@ pnpm wrangler tail
 - Add GitHub / Google authentication
 - Add a 404/500 error page
 - Improve logout: ATM there are two ways it is done, but I didn't decide yet which one is better
+
+## Troubleshooting
+
+In case you encounter any issues with the worker, you can use
+
+```bash
+pnpm wrangler tail
+```
+
+to inspect logs.
+
+Here are some errors I encountered and their solutions:
+
+- [@node-rs/argon2 Cloudflare Workers Compatibility](misc/ARGON2_RESEARCH.md)
+- [[500] GET / Error: Prerendered response not found](misc/CLOUDFLARE_PRERENDER_ERROR_ANALYSIS.md)
 
 ## FAQ
 
