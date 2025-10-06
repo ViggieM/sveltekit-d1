@@ -41,6 +41,12 @@ Set the "migrations_dir" of your recently created database in `wrangler.jsonc` t
 ]
 ```
 
+And generate the migrations for the tables 'user' and 'session':
+
+```bash
+pnpm run db:generate
+```
+
 ### 3. Create an environment file `.env` with the following values (see `.env.example`)
 
 <details>
