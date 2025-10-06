@@ -113,6 +113,7 @@ pnpm wrangler tail
 - Add GitHub / Google authentication
 - Add a 404/500 error page
 - Improve logout: ATM there are two ways it is done, but I didn't decide yet which one is better
+- In case you don't need any authentication, use the prompt [misc/REMOVE_AUTHENTICATION_PROMPT.md](misc/REMOVE_AUTHENTICATION_PROMPT.md)
 
 ## Troubleshooting
 
