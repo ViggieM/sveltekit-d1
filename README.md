@@ -28,6 +28,19 @@ pnpx wrangler d1 create --binding 'DB' [DATABASE_NAME]
 pnpm wrangler types ./src/worker-configuration.d.ts
 ```
 
+Set the "migrations_dir" of your recently created database in `wrangler.jsonc` to "drizzle".
+
+```jsonc
+// wrangler.jsonc
+
+"d1_databases": [
+  {
+    // ...
+    "migrations_dir": "drizzle"
+  }
+]
+```
+
 ### 3. Create an environment file `.env` with the following values (see `.env.example`)
 
 <details>
@@ -115,6 +128,8 @@ Here are some errors I encountered and their solutions:
 
 - [@node-rs/argon2 Cloudflare Workers Compatibility](misc/ARGON2_RESEARCH.md)
 - [[500] GET / Error: Prerendered response not found](misc/CLOUDFLARE_PRERENDER_ERROR_ANALYSIS.md)
+
+Note that these reports were written by Claude Code, so they might contain false informations and hints. :)
 
 ## FAQ
 

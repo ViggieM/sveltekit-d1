@@ -4,7 +4,7 @@ import { getDb } from '$lib/server/db';
 import { sequence } from '@sveltejs/kit/hooks';
 
 const initializeDb: Handle = async ({ event, resolve }) => {
-	event.locals.db = getDb(event.platform!.env.sveltekit_template);
+	event.locals.db = getDb(event.platform!.env.DB);
 	return resolve(event);
 };
 
