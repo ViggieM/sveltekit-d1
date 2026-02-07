@@ -1,7 +1,6 @@
 // ABOUTME: Remote functions for authentication (login and register)
 import * as v from 'valibot';
-import { form } from '$app/server';
-import { getRequestEvent } from '$app/server';
+import { form, getRequestEvent } from '$app/server';
 import { redirect } from '@sveltejs/kit';
 import { scrypt, randomBytes, timingSafeEqual } from 'node:crypto';
 import { promisify } from 'node:util';
