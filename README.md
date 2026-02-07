@@ -91,23 +91,30 @@ npx wrangler secret put CLOUDFLARE_D1_TOKEN
 pnpm wrangler types ./src/worker-configuration.d.ts
 ```
 
-### 5. Generate and apply database migrations
+### 5. Generate and apply database migrations (locally)
 
 ```bash
-pnpm drizzle-kit push
-
 # generate migrations in the /drizzle folder
 pnpm drizzle-kit generate
-pnpm drizzle-kit migrate
 
 # apply migrations locally
 pnpm wrangler d1 migrations apply [DATABASE_NAME] --local
 ```
 
+Wrangler will create a local SQLite inside `.wrangler/state/v3/d1/` and apply those migrations to it.
+You can test your setup locally with:
+
+```bash
+pnpm wrangler preview
+```
+
 ### 6. Deploy your worker
 
 ```bash
-pnpm build
+# apply migrations to remote D1 database
+pnpm drizzle-kit migrate
+
+# deploy project to cloudflare workers
 pnpm wrangler deploy
 
 # follow logs
